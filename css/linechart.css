@@ -1,0 +1,57 @@
+.kc-gen-linechart-canvas{
+	width:700px;
+	margin:10px auto;
+	height:300px;
+}
+
+textarea{
+	width: 700px;
+	height:100px;
+	display: block;
+	margin:10px auto;
+}
+.table-container table{
+	width: 700px;
+	font-size: 12px;
+	font-weight: normal;
+	margin:0px auto;
+}
+.table-container table td{
+	border:1px solid #eee;
+	padding: 2px 8px;
+}
+.table-container table td input{
+	min-width:30px;
+	max-width:60px;
+}
+.btn-gen-chart,.btn-gen-chart:hover{
+	display: block;
+	width:80px;
+	height:26px;
+	text-align: center;
+	color:#444;
+	position: absolute;
+	line-height: 26px;
+	background: #eee;
+	border:1px solid #ccc;
+	border-radius:3px 3px 3px 3px;
+	text-decoration: none;
+	bottom:10px;
+	left:360px;
+}
+.lbl-range{
+	display: block;
+}
+.kc-gen-tbl-config{width: 700px;
+	font-size: 12px;
+	font-weight: normal;
+	margin:0px auto;}
+
+.kc-gen-tbl-config td{
+	border:1px solid #eee;
+	padding: 2px 8px;
+}
+.kc-gen-tbl-config .tbl-title{
+	font-weight: bold;
+	background: #ccc;
+}

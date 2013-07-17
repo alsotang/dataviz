@@ -1,0 +1,63 @@
+body{
+	font-family: Microsoft Yahei;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+	color:#666;
+}
+h1{
+	font-size: 16px;
+}
+table{
+	font-size: 12px;
+}
+.kc-gen-pop-container{
+	width:800px;
+	height:570px;
+	margin:0px auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.kc-gen-pop-switch-item{
+	width:800px;
+	height:570px;
+	float: left;
+}
+.kc-gen-pop-container .siderbar{
+	width:100px;
+	border:1px solid #eee;
+	border-top: none;
+	float: left;
+}
+.kc-gen-pop-container .siderbar li{
+	display: block;
+	line-height: 30px;
+	text-indent: 10px;
+	background: #f7f7f7;
+	border-top: 1px solid #ccc;
+	border-bottom:1px solid #fff;
+}
+.kc-gen-pop-container .type-detail{
+}
+.kc-gen-pop-container .type-detail img{
+	width:700px;
+	height:300px;
+	border:2px solid #ccc;
+	display: block;
+	margin:10px auto;
+}
+.kc-gen-btn-default,.kc-gen-btn-default:hover{
+	display: inline;
+	padding:1px 5px;
+	line-height: 26px;
+	background: #eee;
+	border:1px solid #ccc;
+	border-radius:3px 3px 3px 3px;
+	text-decoration: none;
+}
+.kc-gen-chart-icon{
+	display: block;
+	float: left;
+	margin: 10px;
+	border:1px solid #ccc;
+}
