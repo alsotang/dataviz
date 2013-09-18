@@ -11,13 +11,8 @@ KISSY.Config.debug = true;
 KISSY.config({
 	packages:[
 		{
-			name:"gallery",
-			path:"../../",
-			tag:"20130516"
-		},
-		{
-			name:"generator",
-			path:"../../",
+			name:"js",
+			path:"../",
 			tag:"20130516"
 		}
 	]

@@ -42,7 +42,7 @@
 </div>
 </div>
 <script>
-KISSY.use("generator/js/mods/barchart/generator",function(S,Generator){
+KISSY.use("js/mods/barchart/generator",function(S,Generator){
 	var gen = new Generator();
 });
 </script>

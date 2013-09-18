@@ -54,7 +54,7 @@
 </div>
 </div>
 <script>
-KISSY.use("generator/js/mods/linechart/generator",function(S,Generator){
+KISSY.use("js/mods/linechart/generator",function(S,Generator){
 	var gen = new Generator();
 });
 </script>

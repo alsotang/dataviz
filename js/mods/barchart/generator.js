@@ -183,10 +183,10 @@
 			$("#J_Gen").on("click",function(){
 				var guId = self.genGuId();
 				IO({
-					url:"../service/barchart_gen.php",
+					url:"../service/chart_gen.php",
 					type:"post",
 					dataType:"json",
-					data:{id:guId,cfg:S.JSON.stringify(S.mix(self.config,{
+					data:{id:guId,ctype:"barchart",cfg:S.JSON.stringify(S.mix(self.config,{
 						renderTo:"#"+guId,anim:{}
 					}))},
 					success:function(data){
@@ -235,4 +235,4 @@
 		}
 	});
 	return Generator;
-},{requires:['base','gallery/kcharts/1.1/barchart/index']});
+},{requires:['base','gallery/kcharts/1.2/barchart/index']});

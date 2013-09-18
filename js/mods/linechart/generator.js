@@ -198,10 +198,10 @@
 			$("#J_Gen").on("click",function(){
 				var guId = self.genGuId();
 				IO({
-					url:"../service/linechart_gen.php",
+					url:"../service/chart_gen.php",
 					type:"post",
 					dataType:"json",
-					data:{id:guId,cfg:S.JSON.stringify(S.mix(self.config,{
+					data:{id:guId,ctype:"linechart",cfg:S.JSON.stringify(S.mix(self.config,{
 						renderTo:"#"+guId,anim:{}
 					}))},
 					success:function(data){

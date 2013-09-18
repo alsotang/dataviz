@@ -24,7 +24,7 @@
 	</div>
 	</div>
 <script type="text/javascript">
-KISSY.use("generator/js/mods/linechart/dataformat",function(S,DataFormat){
+KISSY.use("js/mods/linechart/dataformat",function(S,DataFormat){
 	DataFormat.init();
 });
 </script>

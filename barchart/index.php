@@ -24,7 +24,7 @@
 	</div>
 	</div>
 <script type="text/javascript">
-KISSY.use("generator/js/mods/barchart/dataformat",function(S,DataFormat){
+KISSY.use("js/mods/barchart/dataformat",function(S,DataFormat){
 	DataFormat.init();
 });
 </script>
