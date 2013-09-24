@@ -105,7 +105,7 @@
 							t:Math.random()
 						};
 						//选择哪种图表
-						self.initOverlay("<iframe scrolling='no' src='../common/charttype.php?"+S.param(params)+"'></iframe>");
+						self.initOverlay("<iframe scrolling='no' src='./common/charttype.php?"+S.param(params)+"'></iframe>");
 				}
 			});
 
@@ -114,11 +114,11 @@
 					var content = self.getHTMLAndScript();
 					if(!content) return;
 					IO({
-						url:"../service/savepage.php?type=a",
+						url:"./service/savepage.php?type=a",
 						type:"post",
 						data:{content:content},
 						success:function(id){
-							window.location.href="../service/savepage.php?type=q&pageid="+id;
+							window.location.href="./service/savepage.php?type=q&pageid="+id;
 						}
 					});
 				}

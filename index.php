@@ -1,6 +1,6 @@
 <?php 
 // SSO登录
-	include './service/ssoFilter.php';
+	// include './service/ssoFilter.php';
 	
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <meta charset="utf-8"/>
 <title>数据小报生成器KCharts</title>
 <link rel="stylesheet" href="http://a.tbcdn.cn/p/global/1.0/global-min.css" />
-<link rel="stylesheet" href="../css/tpl-dpl.css" />
+<link rel="stylesheet" href="./css/tpl-dpl.css" />
 <script src="http://a.tbcdn.cn/??s/kissy/1.3.0/kissy.js"></script>
 <script type="text/javascript">
 KISSY.Config.debug = true;
@@ -17,7 +17,7 @@ KISSY.config({
 	packages:[
 		{
 			name:"js",
-			path:"../",
+			path:"./",
 			tag:"20130516"
 		}
 	]
@@ -32,7 +32,7 @@ KISSY.config({
 		<a href="#" class="kc-gen-to-add">点击添加图表</a>
 	</div>
 </div>
-<form method="post" action="../service/savechart.php">
+<form method="post" action="./service/savechart.php">
 	<input type="hidden" value="" id="H_chart_doc" name="doc"/>
 </form>
 <script>
