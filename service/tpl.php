@@ -15,16 +15,16 @@ $tpl_header = <<<HTML
 <link rel="stylesheet" href="../css/tpl-dpl.css" />
 <script src='http://a.tbcdn.cn/??s/kissy/1.3.0/kissy-min.js'></script>
 <script>
-	KISSY.Config.debug = true;
-	KISSY.config({
-	packages:[
-		{
-			name:"gallery",
-			path:"../../",
-			tag:"20130516"
-		}
-	]
-});
+	// KISSY.Config.debug = true;
+// 	KISSY.config({
+// 	packages:[
+// 		{
+// 			name:"gallery",
+// 			path:"../../",
+// 			tag:"20130516"
+// 		}
+// 	]
+// });
 </script>
 </head>
 <body>
