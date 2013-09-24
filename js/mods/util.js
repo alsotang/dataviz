@@ -126,9 +126,6 @@
 				if(len > 0 && len == j){
 					return false;
 				}
-				S.log("len:"+len)
-				S.log("j:"+j)
-				S.log(args[0] !== undefined && !isNum(args[0]) && j == 1)
 				if(args[0]&&!isNum(args[0])&& j == 1){
 					return true;
 				}

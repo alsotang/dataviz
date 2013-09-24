@@ -58,7 +58,7 @@
 	margin: 5px;
 	cursor: pointer;
 	position: relative;
-	min-height:200px;
+	height:300px;
 }
 .kc-gen-container .kc-gen-graph:hover{
 	border-color:#f60;

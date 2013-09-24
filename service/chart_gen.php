@@ -9,10 +9,10 @@ $width = $_SESSION['width'];
 $height = $_SESSION['height'];
 
 function gen_chart($id,$current_edit_id,$chart_type,$width,$height,$cfg){
-	$html = "<div style='width:".$width."px;height:".$height."px' id=".$id.">";
+	$html = "<div style='width:".$width."px;height:".$height."px' class='kc-gen-wrapper' id=".$id.">";
 	$html .="</div>";
 
-	$script ="KISSY.use('gallery/kcharts/1.2/".$chart_type."/index',function(S,Chart){new Chart(".$cfg.");})";
+	$script ="KISSY.use('gallery/kcharts/1.2/".$chart_type."/index',function(S,Chart){window['KC_Gen_".$id."'] = new Chart(".$cfg.");});";
 
 	$json = array();
 	$json['html'] = $html;

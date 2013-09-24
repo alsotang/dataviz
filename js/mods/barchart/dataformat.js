@@ -42,11 +42,7 @@ KISSY.add(function(S,BarChart,Util){
 			      },
 			      series:self.fdata.series,
 			      legend:{
-			         isShow:true,
-			        layout:"horizontal",
-			        align:"center",
-			       	verticalAlign:'bottom',
-			       	y:-10
+			         isShow:true
 			      },
 			      tip:{
 			        offset:{
@@ -109,4 +105,4 @@ KISSY.add(function(S,BarChart,Util){
 		}
 	};
 
-},{requires:['gallery/kcharts/1.1/barchart/index','../util.js']});
+},{requires:['gallery/kcharts/1.2/barchart/index','../util.js']});

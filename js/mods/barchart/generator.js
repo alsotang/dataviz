@@ -192,7 +192,8 @@
 					success:function(data){
 						var topWindow = window.top.window;
 						var $tgt = S.one("#"+data.ctnid,topWindow.document.body);
-						$tgt.html(data.html)
+						$(".kc-gen-to-add",$tgt).remove();
+						$(data.html).prependTo($tgt);
 						var script = topWindow.document.createElement("script");
 						script.innerHTML = data.script;
 						$tgt[0].appendChild(script);

@@ -42,11 +42,7 @@ KISSY.add(function(S,LineChart,Util){
 			      },
 			      series:self.fdata.series,
 			      legend:{
-			         isShow:true,
-			        layout:"horizontal",
-			        align:"center",
-			       	verticalAlign:'bottom',
-			       	y:-10
+			         isShow:true
 			      },
 			      points:{
 			      	attr:{

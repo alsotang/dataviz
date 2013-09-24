@@ -44,29 +44,29 @@
 		    });
 			var resize = new Resizable({
 					node:$(node),
-					handlers:["b"],
+					handlers:["b","l","r","t","tl","tr","bl","br"],
 					minHeight:250,
 			        minWidth:250,
-			        maxWidth:950
+			        maxWidth:960
 				});
 
-			// resize.on("resizeEnd",function(e){
-			// 	var $container = $(".kc-gen-wrapper",$(node));
-			// 	if($container.attr("id")&&window["KC_Gen_"+$container.attr("id")]){
-			// 		$container.width(e.target["_width"]);
-			// 		$container.height(e.target["_height"]);
-			// 		var linechart = window["KC_Gen_"+$container.attr("id")];
-			// 		linechart.init();
-			// 	}
-			// });
-				 // var drag=new DD.Draggable({
-			  //       node:$(node),
-			  //       cursor:'move',
-			  //       move:true,
-			  //        plugins:[
-			  //           constrain
-			  //       ]
-			  //   });
+			resize.on("resizeEnd",function(e){
+				var $container = $(".kc-gen-wrapper",$(node));
+				if($container.attr("id")&&window["KC_Gen_"+$container.attr("id")]){
+					$container.width(resize.userConfig.node.width());
+					$container.height(resize.userConfig.node.height());
+					var linechart = window["KC_Gen_"+$container.attr("id")];
+					linechart.init();
+				}
+			});
+				 var drag=new DD.Draggable({
+			        node:$(node),
+			        cursor:'move',
+			        move:true,
+			         plugins:[
+			            constrain
+			        ]
+			    });
 		},
 		initOverlay:function(content){
 			var self = this;
