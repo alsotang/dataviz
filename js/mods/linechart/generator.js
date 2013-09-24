@@ -269,4 +269,4 @@
 		}
 	});
 	return Generator;
-},{requires:['base','gallery/kcharts/1.1/linechart/index']});
+},{requires:['base','gallery/kcharts/1.2/linechart/index']});

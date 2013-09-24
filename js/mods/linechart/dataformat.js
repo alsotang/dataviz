@@ -114,4 +114,4 @@ KISSY.add(function(S,LineChart,Util){
 		}
 	};
 
-},{requires:['gallery/kcharts/1.1/linechart/index','../util.js']});
+},{requires:['gallery/kcharts/1.2/linechart/index','../util.js']});
