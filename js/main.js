@@ -55,8 +55,8 @@
 				if($container.attr("id")&&window["KC_Gen_"+$container.attr("id")]){
 					$container.width(resize.userConfig.node.width());
 					$container.height(resize.userConfig.node.height());
-					var linechart = window["KC_Gen_"+$container.attr("id")];
-					linechart.init();
+					var chart = window["KC_Gen_"+$container.attr("id")];
+					chart.init();
 				}
 			});
 				 var drag=new DD.Draggable({
