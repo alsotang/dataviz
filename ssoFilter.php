@@ -1,6 +1,6 @@
 <?php
-include 'buc_sso_macro.php';
-
+include './buc_sso_macro.php';
+header('Content-Type: text/html; charset=utf-8');
 $params=array('APP_NAME'=>BUC_SSO_APP_NAME,'CLIENT_VERSION'=>BUC_SSO_CLIENT_VERSION);
 $params=http_build_query($params);
 

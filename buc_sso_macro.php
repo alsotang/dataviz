@@ -1,36 +1,33 @@
 <?php 
-//cookie 加密
-//心跳是否有效
-//.do 映射是否有更好的方式
-//todo logout
 header('Content-Type: text/plain; charset=utf-8');
-define(BUC_SSO_SERVER_URL,"https://login-test.alibaba-inc.com");
-define(BUC_SSO_COMMUNICATE_URL,BUC_SSO_SERVER_URL."/rpc/sso/communicate.json");
-define(BUC_SSO_LOGIN_URL,BUC_SSO_SERVER_URL."/ssoLogin.htm");
-define(BUC_SSO_UPDATE_APP_VERSION_URL,BUC_SSO_SERVER_URL."/updateAppVersion.do");
-define(BUC_SSO_APP_NAME,"phpsample");
-define(BUC_SSO_CLIENT_VERSION,"0.3.7");
-define(BUC_SSO_CLIENT_KEY,"123456789");
-define(BUC_SSO_HEART_BEAT_PERIOD,5*60*1000);
-define(BUC_SSO_COOKIE_DOMAIN,null);
-define(BUC_SSO_COOKIE_PATH,null);
-
-//扩展点
+define('BUC_SSO_SERVER_URL',"https://login-test.alibaba-inc.com");
+define('BUC_SSO_COMMUNICATE_URL',BUC_SSO_SERVER_URL."/rpc/sso/communicate.json");
+define('BUC_SSO_LOGIN_URL',BUC_SSO_SERVER_URL."/ssoLogin.htm");
+define('BUC_SSO_UPDATE_APP_VERSION_URL',BUC_SSO_SERVER_URL."/updateAppVersion.do");
+define('BUC_SSO_APP_NAME',"kcharts");
+define('BUC_SSO_CLIENT_VERSION',"1.0.0");
+define('BUC_SSO_CLIENT_KEY',"0350e607-75c4-4eca-bad9-1276d37f9c99");
+define('BUC_SSO_HEART_BEAT_PERIOD',5*60*1000);
+define('BUC_SSO_COOKIE_DOMAIN',null);
+define('BUC_SSO_COOKIE_PATH',null);
+//扩展点 检查登录态 是否合法
 function checkUser(){
 	if(isset($_COOKIE["USER_COOKIE"])){
+		$v=buc_sso_decode($_COOKIE["USER_COOKIE"],BUC_SSO_CLIENT_KEY,true);
+		if (!empty($v))
 		return true;
 	}
 	return false;
 }
-//扩展点
+//扩展点 增加登录态
 function addUser($user_info){
-	print_r($user_info);
 	$v=buc_sso_encode($user_info['empId'],BUC_SSO_CLIENT_KEY,true);
 	setcookie("USER_COOKIE",$v,0,BUC_SSO_COOKIE_PATH,BUC_SSO_COOKIE_DOMAIN,false,false);//set user_cookie
 }
-//扩展点
+//扩展点 删除登录态
 function removeUser(){
-	setcookie("USER_COOKIE");
+	echo "remove";
+	setcookie("USER_COOKIE","",time()-3600);
 }
 
 function isHeartBeatExpired(){
@@ -95,14 +92,14 @@ function communicate($ssoToken,$isReturnUser){
 	return true;
 }
 
-function buc_sso_encode($code,$seed = "!@#89", $safe = false){
+function buc_sso_encode($code, $seed = "!@#89", $safe = false){
 	if ($safe) $code = base64_encode(strrev(str_rot13($code)));
 	$c_l = strlen($code);
 	$s_m = md5($seed);
-	$s_l = strlen($m);
+	$s_l = strlen($s_m);
 	$a=0;
 	while ($a <$c_l){
-		$str .= sprintf ("%'02s",base_convert(ord($code{$a})+ord($s_m{$s_l % $a+1}),10,32));
+		$str .= sprintf ("%'02s",base_convert(ord($code{$a})+ord($s_m{$s_l % ($a+1)}),10,32));
 		$a++;
 	}
 	return $str;//wordwrap($str, 80, "\n", true)
@@ -111,13 +108,14 @@ function buc_sso_encode($code,$seed = "!@#89", $safe = false){
 
 function buc_sso_decode($code, $seed = '!@#89', $safe = false){
 	//$code = preg_replace("'[ \r\n\t]+'", '', $code);
+	$str = "";
 	preg_match_all("/.{2}/", $code, $arr);
 	$arr = $arr[0];
 	$s_m = md5($seed);
-	$s_l = strlen($m);
+	$s_l = strlen($s_m);
 	$a = 0;
 	foreach ($arr as $value){
-		$str .= chr(base_convert($value,32,10)-ord($s_m{$s_l % $a+1}));
+		$str .= chr(base_convert($value,32,10)-ord($s_m{$s_l % ($a+1)}));
 		$a++;
 	}
 	if ($safe) $str = str_rot13(strrev(base64_decode($str)));

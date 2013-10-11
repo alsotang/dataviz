@@ -144,7 +144,7 @@
 		},
 		renderBtnSave:function(){
 			var self = this;
-			$("<div class='kc-gen-save-banner'><a href='#' id='J_AddDiv' class='btn-add-div'>插入容器</a><a href='#' id='J_SavePage' class='btn-save-page'>保存页面</a></div>").appendTo($("body"));
+			$("<div class='kc-gen-save-banner'><a href='#' id='J_AddDiv' class='btn-add-div'>插入图表</a><a href='#' id='J_EditCode' class='btn-edit-div'>编辑源代码</a><a href='#' id='J_SavePage' class='btn-save-page'>保存页面</a></div>").appendTo($("body"));
 		}
 	})
 	return Main;

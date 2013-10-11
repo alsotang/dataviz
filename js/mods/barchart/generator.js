@@ -80,11 +80,8 @@
 		            }
 		            ],
 		      legend:{
-		         isShow:true,
-		        layout:"horizontal",
-		        align:"center",
-		       	verticalAlign:'bottom',
-		       	y:-10
+		         isShow:true
+		       
 		      },
 		      tip:{
 		        offset:{

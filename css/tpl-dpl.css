@@ -88,7 +88,7 @@
 	bottom: 0px;
 	z-index: 2;
 }
-.kc-gen-save-banner .btn-save-page,.kc-gen-save-banner .btn-add-div{
+.kc-gen-save-banner .btn-save-page,.kc-gen-save-banner .btn-add-div,.kc-gen-save-banner .btn-edit-div{
 	display: block;
 	width:150px;
 	height:30px;
@@ -108,7 +108,11 @@
 	right:220px;
 	background: red;
 }
-
+.kc-gen-save-banner .btn-edit-div{
+    right:390px;
+    color:#fff;
+    background: #000;
+}
 .del-chart{
 	position: absolute;
 	z-index: 100;
