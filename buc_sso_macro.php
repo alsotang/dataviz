@@ -26,7 +26,6 @@ function addUser($user_info){
 }
 //扩展点 删除登录态
 function removeUser(){
-	echo "remove";
 	setcookie("USER_COOKIE","",time()-3600);
 }
 

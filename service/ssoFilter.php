@@ -1,5 +1,5 @@
 <?php
-include './buc_sso_macro.php';
+include 'buc_sso_macro.php';
 
 $params=array('APP_NAME'=>BUC_SSO_APP_NAME,'CLIENT_VERSION'=>BUC_SSO_CLIENT_VERSION);
 $params=http_build_query($params);
@@ -13,6 +13,7 @@ $opts=array(
 );
 
 $context=stream_context_create($opts);
+echo $context;
 file_get_contents(BUC_SSO_UPDATE_APP_VERSION_URL,false,$context);
 
 $my_protocal="";
@@ -36,7 +37,7 @@ if(isHeartBeatExpired()){
 		exit;
 	}
 }
-header('Content-Type: text/html; charset=utf-8');
+
 
 
 ?>
