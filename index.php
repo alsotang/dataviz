@@ -25,7 +25,7 @@ KISSY.config({
 });</script>
 </head>
 <body>
-<div><a href="https://login.alibaba-inc.com/sso_logout.htm">注销</a></div>
+<!-- <div><a href="https://login.alibaba-inc.com/sso_logout.htm">注销</a></div> -->
 <div class="kc-gen-container">
 	<div class="kc-gen-graph" id="J_Paper1">
 		<a href="#" class="kc-gen-to-add">点击添加图表</a>
