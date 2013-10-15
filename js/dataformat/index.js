@@ -1,7 +1,7 @@
 KISSY.add(function(S){
 	var $ = S.all;
 	function format(data){
-		var data = S.trim(data).replace(/\n|,/g,",").split(",");
+		var data = S.trim(data).replace(/,|%/g,"").replace(/\n/g,",").split(",");
 		for(var i in data){
 			data[i] = S.trim(data[i]).split(/\t|\s+/g);
 		}

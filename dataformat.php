@@ -18,17 +18,37 @@ KISSY.config({
 });</script>
 </head>
 <style type="text/css">
+.ctn{
+	width: 1000px;
+	margin:0px auto;
+	text-align: center;
+}
 	textarea{
-		width: 600px;
+		width: 960px;
 		height: 280px;
 		border:2px solid #ccc;
+		margin:10px 0px;
 	}
-
+	h1{
+		font-size: 28px;
+		padding: 20px;
+	}
+	h3{
+		font-size: 16px;
+		text-align: left;
+	}
+	h3 span{
+		font-size: 12px;
+		color:#f60;
+	}
 </style>
 <body>
-	<h1>在线数据转换器</h1>
+	<div class="ctn">
+	<h1>在线数据转换工具 <span style="color:#f60;font-size:16px;">Beta</span></h1>
+<div>
+<h3>Input <span>(粘贴代码至此)</span></h3>
 <textarea id="J_Input">
-	浏览PV	浏览UV
+	浏览PV	浏览UVw
 16日	874881	631957
 17日	774063	557791
 18日	724666	546890
@@ -37,10 +57,13 @@ KISSY.config({
 21日	862436	653583
 22日	981748	701272
 </textarea>
+<div>
+<h3>Output <span>(粘贴以下代码至画报生成器)</span></h3>
 <textarea id="J_Output">
 	
 
 </textarea>
+</div>
 <script>
 
 KISSY.use("js/dataformat/");
