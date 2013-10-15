@@ -44,7 +44,7 @@ KISSY.config({
 </style>
 <body>
 	<div class="ctn">
-	<h1>在线数据转换工具 <span style="color:#f60;font-size:16px;">Beta</span></h1>
+	<h1>在线数据转换工具 <span style="color:#f60;font-size:16px;">Beta</span><a href="http://kcharts.taobao.net/dataviz/index.php" target="_blank" style="color:#f60;float:right;font-size:12px;line-height:60px;">开始创建我的数据画报&gt;&gt;</a></h1>
 <div>
 <h3>Input <span>(粘贴代码至此)</span></h3>
 <textarea id="J_Input">
@@ -63,6 +63,7 @@ KISSY.config({
 	
 
 </textarea>
+
 </div>
 <script>
 
