@@ -28,7 +28,7 @@
 			</tr>
 			<tr>
 				<td>单位</td>
-				<td><input class="ipt-txt" type="text" id="J_Unit" value="℃"><a href='#' class="kc-gen-btn-default btn-apply">应用</a></td>
+				<td><input class="ipt-txt" type="text" id="J_Unit" value=""><a href='#' class="kc-gen-btn-default btn-apply">应用</a></td>
 				<td>y轴最小值</td>
 				<td><input class="ipt-txt" type="text" id="J_Min"><a href='#' class="kc-gen-btn-default btn-apply">应用</a></td>
 			</tr>
