@@ -1,6 +1,6 @@
 <?php 
 // SSO登录
-	// include './ssoFilter.php';
+	include './ssoFilter.php';
 	
 ?>
 
