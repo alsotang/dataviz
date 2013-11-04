@@ -1,46 +1,81 @@
 <?php 
-// SSO登录
-	include './ssoFilter.php';
+include 'service/loginFilter.php';
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8"/>
 <title>数据小报生成器KCharts</title>
 <link rel="stylesheet" href="http://a.tbcdn.cn/p/global/1.0/global-min.css" />
-<link rel="stylesheet" href="./css/tpl-dpl.css" />
-<script src="http://a.tbcdn.cn/??s/kissy/1.3.0/kissy.js"></script>
-<script type="text/javascript">
-KISSY.Config.debug = true;
-KISSY.config({
-	packages:[
-		{
-			name:"js",
-			path:"./",
-			tag:"20130516"
-		}
-	]
-});</script>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script> 
+<script src="http://a.tbcdn.cn/??s/kissy/1.3.1/kissy.js"></script>
 </head>
-<body>
-<!-- <div><a href="https://login.alibaba-inc.com/sso_logout.htm">注销</a></div> -->
-<div class="kc-gen-container">
-	<div class="kc-gen-graph" id="J_Paper1">
-		<a href="#" class="kc-gen-to-add">点击添加图表</a>
+<body style="padding:5px;">
+<div>
+	<div class="navbar">
+	  <div class="navbar-inner">
+	    <a class="brand" href="#">KCharts</a>
+	    <ul class="nav">
+	      <li class="active"><a href="#">我创建的页面</a></li>
+	      <li><a href="#">所有页面</a></li>
+	    </ul>
+	  </div>
 	</div>
-	<div class="kc-gen-graph" id="J_Paper2">
-		<a href="#" class="kc-gen-to-add">点击添加图表</a>
+	<ul class="breadcrumb">
+  <li><a href="#">首页</a> <span class="divider">/</span></li>
+  <li class="active">我创建的页面</li>
+</ul>
+	<div  class="well well-small">
+		<div class="btn-group">
+		  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+		    请选择
+		    <span class="caret"></span>
+		  </a>
+		  <ul class="dropdown-menu">
+		   	<li>日期</li>
+		   	<li>日期</li>
+		  </ul>
+		</div>
 	</div>
-</div>
-<form method="post" action="./service/savechart.php">
-	<input type="hidden" value="" id="H_chart_doc" name="doc"/>
-</form>
-<script>
+	<table class="table well well-small">
+		<tr>
+			<th>标题</th>
+			<th>标题</th>
+			<th>标题</th>
+			<th>标题</th>
+			<th>日期</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td>这个是demo</td>
+			<td>test</td>
+			<td>test</td>
+			<td>test</td>
+			<td>2013-01-01 10:00:11</td>
+			<td>
+				<button type="button" class="btn btn-default">查看</button>
+				<button type="button" class="btn btn-default">编辑</button>
+				<button type="button" class="btn btn-danger">删除</button>
+			</td>
+		</tr>
+		
+		
 
-KISSY.use("js/main",function(S){
-	new arguments[1]()
-});
-</script>
+	</table>
+
+<div class="pagination well well-small">
+  <ul>
+    <li><a href="#">Prev</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Next</a></li>
+  </ul>
+</div>
+</div>	
 </body>
 </html>
