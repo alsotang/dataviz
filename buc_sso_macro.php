@@ -1,6 +1,6 @@
 <?php 
 header('Content-Type: text/plain; charset=utf-8');
-define('BUC_SSO_SERVER_URL',"https://login-test.alibaba-inc.com");
+define('BUC_SSO_SERVER_URL',"https://login.alibaba-inc.com");
 define('BUC_SSO_COMMUNICATE_URL',BUC_SSO_SERVER_URL."/rpc/sso/communicate.json");
 define('BUC_SSO_LOGIN_URL',BUC_SSO_SERVER_URL."/ssoLogin.htm");
 define('BUC_SSO_UPDATE_APP_VERSION_URL',BUC_SSO_SERVER_URL."/updateAppVersion.do");
@@ -10,9 +10,11 @@ define('BUC_SSO_CLIENT_KEY',"0350e607-75c4-4eca-bad9-1276d37f9c99");
 define('BUC_SSO_HEART_BEAT_PERIOD',5*60*1000);
 define('BUC_SSO_COOKIE_DOMAIN',null);
 define('BUC_SSO_COOKIE_PATH',null);
+
 //扩展点 检查登录态 是否合法
 function checkUser(){
 	if(isset($_COOKIE["USER_COOKIE"])){
+		//获取工号
 		$v=buc_sso_decode($_COOKIE["USER_COOKIE"],BUC_SSO_CLIENT_KEY,true);
 		if (!empty($v))
 		return true;
@@ -22,6 +24,14 @@ function checkUser(){
 //扩展点 增加登录态
 function addUser($user_info){
 	$v=buc_sso_encode($user_info['empId'],BUC_SSO_CLIENT_KEY,true);
+	//$user_info['id']  buc id
+//$user_info['lastName']  真名
+//$user_info['nickNameCn']  花名
+//$user_info['empId']  工号
+//$user_info['emailAddr']  邮箱
+//$user_info['loginName']  登录名
+
+
 	setcookie("USER_COOKIE",$v,0,BUC_SSO_COOKIE_PATH,BUC_SSO_COOKIE_DOMAIN,false,false);//set user_cookie
 }
 //扩展点 删除登录态

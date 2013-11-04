@@ -1,7 +1,6 @@
 <?php 
 // SSO登录
 	include './ssoFilter.php';
-	
 ?>
 
 <!DOCTYPE html>
