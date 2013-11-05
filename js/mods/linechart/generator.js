@@ -14,7 +14,7 @@
 				self.renderChart(cfg);
 			},200);	
 			self.set("pointstyle","auto")
-			self.set("unit","℃");
+			self.set("unit","");
 			self.renderChart();
 			self.bindEvt();
 		},

@@ -8,6 +8,9 @@ $current_edit_id = $_SESSION['current_edit_id'];
 $width = $_SESSION['width'];
 $height = $_SESSION['height'];
 
+
+
+//生成 图表代码块 
 function gen_chart($id,$current_edit_id,$chart_type,$width,$height,$cfg){
 	$html = "<div style='width:".$width."px;height:".$height."px' class='kc-gen-wrapper' id=".$id.">";
 	$html .="</div>";

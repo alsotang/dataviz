@@ -9,7 +9,7 @@ $opts=array(
 				'method'=>'POST',
 				'header'=>"Content-type: application/x-www-form-urlencoded",
 				'content'=>$params
-		),
+		)
 );
 
 $context=stream_context_create($opts);

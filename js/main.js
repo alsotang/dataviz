@@ -118,7 +118,8 @@
 						type:"post",
 						data:{content:content},
 						success:function(id){
-							window.location.href="./service/savepage.php?type=q&pageid="+id;
+							location.href="index.php";
+							// window.location.href="./service/savepage.php?type=q&pageid="+id;
 						}
 					});
 				}
